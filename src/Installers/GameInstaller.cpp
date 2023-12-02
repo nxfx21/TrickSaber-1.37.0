@@ -57,7 +57,7 @@ namespace TrickSaber::Installers {
     }
 
     void GameInstaller::BindTrickManager(GlobalNamespace::SaberType saberType) {
-        DEBUG("BindTrickManager: {}", saberType);
+        //DEBUG("BindTrickManager: {}", saberType);
         auto func = custom_types::MakeDelegate<System::Func_2<::Zenject::InjectContext*, UnityEngine::GameObject*>*>(
             std::function<::UnityEngine::GameObject*(::Zenject::InjectContext*)>(
                 std::bind(&GameInstaller::GetSaber, this, std::placeholders::_1, saberType)
